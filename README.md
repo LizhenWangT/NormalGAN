@@ -32,24 +32,34 @@ Put the pretrained models in the directory model/pretrained/
 
 # Testing
 Generate the csv file for the image path. 
->cd datasets
-
->python data_utils/createcsv.py testdata/ test.csv
-
->cd ..
+'''
+cd datasets
+python data_utils/createcsv.py testdata/ test.csv
+'''
 
 Run the test_offline.sh (your csv file name) (your save dir name)
->sh test_offline.sh test.csv testdata
+'''
+sh test_offline.sh test.csv testdata
+'''
 
 Results are shown in results/testdata/ply. You can use Poisson Reconstruction to the meshes for better performance of the edge area.
 
-To test on your own data, you need to **apply the mask to your image** before input them into NormalGAN. 
+# Testing on your own data
+ * You need to **apply the mask to your image** before input them into NormalGAN. 
+ * Create datasets/yourdata/color and datasets/yourdata/depth (use the same filename for your RGB-D image pairs). 
+ * Use data_utils/createcsv.py to create your csv file.
+ * Run test_offline.sh to test your data.
 
-Then create datasets/yourdata/color and datasets/yourdata/depth, use the same filename for your RGB-D image pairs. 
+**Note that**, NormalGAN simulate noise of Kinect v2 (or similar ToF depth cameras), the image resolution should be **(512,424)** and **(424,424)** for network input. Please change the intrinsics or image resolution in src/test_offline.py.
 
-Use data_utils/createcsv.py to create your csv file and use test_offline.sh to test your data.
+# Citation
+'''
+@inproceedings{wang2020normalgan,
+title={NormalGAN: Learning Detailed 3D Human from a Single RGB-D Image},
+author={Wang, Lizhen and Zhao, Xiaochen and Yu, Tao and Wang, Songtao and Liu, Yebin},
+booktitle={ECCV},
+year={2020}
+}
+'''
 
-Note that, NormalGAN simulate noise of Kinect v2 (or similar ToF depth cameras), the image resolution should be **(512,424)** (and **424,424** for network input)
-
-Please change the intrinsics or image resolution in src/test_offline.py.
 
