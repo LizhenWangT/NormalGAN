@@ -26,7 +26,7 @@ Recommend for Kinect v2 python implement
 
 
 # Pretrained models
-Download the pretrained models in [Comming soon].
+Download the pretrained models in [Pretrained models](https://drive.google.com/file/d/1EJfDeow-yUcJm85zaKnZ3HsWGXk0Auze/view?usp=sharing).
 
 Put the pretrained models in the directory model/pretrained/
 
@@ -42,13 +42,13 @@ Run the test_offline.sh *(your csv file name)* *(your save dir name)*
 sh test_offline.sh test.csv testdata
 ```
 
-Results are shown in results/testdata/ply. You can use Poisson Reconstruction to the meshes for better performance of the edge area.
+Results are shown in **results/testdata/ply**. You can use Poisson Reconstruction to the meshes for better performance of the edge area.
 
 # Testing on your own data
  * You need to **apply the mask to your image** before input them into NormalGAN. 
  * Create **datasets/yourdata/color** and **datasets/yourdata/depth** (use the same filename for your RGB-D image pairs). 
  * Use **data_utils/createcsv.py** to create your csv file.
- * Run **test_offline.sh to test** your data.
+ * Run **test_offline.sh** to test your data.
 
 Note that, NormalGAN simulate noise of Kinect v2 (or similar ToF depth cameras), the image resolution should be *(512,424)* and *(424,424)* for network input. Please change the intrinsics or image resolution in **src/test_offline.py**.
 
