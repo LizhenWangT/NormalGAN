@@ -33,13 +33,23 @@ Put the pretrained models in the directory model/pretrained/
 # Testing
 Generate the csv file for the image path. 
 >cd datasets
+
 >python data_utils/createcsv.py testdata/ test.csv
+
 >cd ..
+
 Run the test_offline.sh (your csv file name) (your save dir name)
 >sh test_offline.sh test.csv testdata
+
 Results are shown in results/testdata/ply. You can use Poisson Reconstruction to the meshes for better performance of the edge area.
 
-To test on your own data, you need to apply the mask to your image before input them into NormalGAN. Then create datasets/yourdata/color and datasets/yourdata/depth, use the same filename for your RGB-D image pairs. Then use data_utils/createcsv.py to create your csv file and use test_offline.sh to test your data.
+To test on your own data, you need to **apply the mask to your image** before input them into NormalGAN. 
 
-Note that, NormalGAN simulate noise of Kinect v2 (or similar ToF depth cameras), the image resolution should be (512,424) (and 424,424 for network input) and you can change the intrinsics or image resolution in src/test_offline.py.
+Then create datasets/yourdata/color and datasets/yourdata/depth, use the same filename for your RGB-D image pairs. 
+
+Use data_utils/createcsv.py to create your csv file and use test_offline.sh to test your data.
+
+Note that, NormalGAN simulate noise of Kinect v2 (or similar ToF depth cameras), the image resolution should be **(512,424)** (and **424,424** for network input)
+
+Please change the intrinsics or image resolution in src/test_offline.py.
 
