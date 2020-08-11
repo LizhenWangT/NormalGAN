@@ -16,7 +16,7 @@ The code and released model were trained on
  * Ubuntu 16.04 & Python 3.5.2
  * Pytorch 1.12
  * trimesh 3.2.36
- * Python-opencv 3.4.3 (for Python-opencv >= 4.0, please change Line 266 of src/ops.py to "contours, _ = cv2.findContours(mask.astype(np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)")
+ * Python-opencv 3.4.3 (for Python-opencv >= 4.0, please change Line 266 of **src/ops.py** to `contours, _ = cv2.findContours(mask.astype(np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)`)
 
 Optional for src/redner.py:
  * Pyrender 0.1.32
@@ -37,7 +37,7 @@ cd datasets
 python data_utils/createcsv.py testdata/ test.csv
 ```
 
-Run the test_offline.sh (your csv file name) (your save dir name)
+Run the test_offline.sh *(your csv file name)* *(your save dir name)*
 ```
 sh test_offline.sh test.csv testdata
 ```
@@ -46,11 +46,11 @@ Results are shown in results/testdata/ply. You can use Poisson Reconstruction to
 
 # Testing on your own data
  * You need to **apply the mask to your image** before input them into NormalGAN. 
- * Create datasets/yourdata/color and datasets/yourdata/depth (use the same filename for your RGB-D image pairs). 
- * Use data_utils/createcsv.py to create your csv file.
- * Run test_offline.sh to test your data.
+ * Create **datasets/yourdata/color** and **datasets/yourdata/depth** (use the same filename for your RGB-D image pairs). 
+ * Use **data_utils/createcsv.py** to create your csv file.
+ * Run **test_offline.sh to test** your data.
 
-**Note that**, NormalGAN simulate noise of Kinect v2 (or similar ToF depth cameras), the image resolution should be **(512,424)** and **(424,424)** for network input. Please change the intrinsics or image resolution in src/test_offline.py.
+Note that, NormalGAN simulate noise of Kinect v2 (or similar ToF depth cameras), the image resolution should be *(512,424)* and *(424,424)* for network input. Please change the intrinsics or image resolution in **src/test_offline.py**.
 
 # Citation
 ```
