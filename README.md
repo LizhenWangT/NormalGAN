@@ -43,9 +43,10 @@ Run the **NormalGAN/test_offline.sh** file (which occupies about 3.5-GB GPU memo
 sh test_offline.sh test.csv testdata
 ```
 
-Results are shown in **NormalGAN/results/testdata/ply**. You can use Poisson Reconstruction to the meshes for better performance of the edge area.
+Results are shown in **NormalGAN/results/testdata/ply**. You can also use Poisson Reconstruction for better performance of the edge area.
 
 # Testing on your own data
+Please note that, NormalGAN simulate noise for Kinect v2 (or similar ToF depth cameras), the image resolution should be **(512,424)**. Please change the camera intrinsics and image resolution in **NormalGAN/src/test_offline.py**.
  * You should first **apply the body mask** for your RGB-D images before testing them with NormalGAN. 
  * Create **NormalGAN/datasets/your_data/color** & **NormalGAN/datasets/your_data/depth** folders, put your own RGB-D data into the folders (use the same filename for your RGB-D image pairs, eg. NormalGAN/datasets/your_data/color/1.png & NormalGAN/datasets/your_data/depth/1.png). 
  * Use **NormalGAN/data_utils/createcsv.py** to create csv file for your own data.
@@ -59,7 +60,6 @@ cd ..
 sh test_offline.sh your_csv_file_name.csv your_save_folder_name
 ```
 
-Note that, NormalGAN simulate noise of Kinect v2 (or similar ToF depth cameras), the image resolution should be **(512,424)**. Please change the camera intrinsics and image resolution in **NormalGAN/src/test_offline.py**.
 
 # Citation
 ```
