@@ -28,7 +28,7 @@ Recommend for Kinect v2 python implement
 # Pretrained models
 Download the pretrained models in [Pretrained models](https://drive.google.com/file/d/1EJfDeow-yUcJm85zaKnZ3HsWGXk0Auze/view?usp=sharing).
 
-Put the pretrained models in the directory model/pretrained/
+Put the pretrained models in **model/pretrained/**
 
 # Testing
 Generate the csv file for the image path. 
