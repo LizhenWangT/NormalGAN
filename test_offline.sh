@@ -11,7 +11,7 @@ echo "savedir: "$savedir
 mkdir -p $savedir
 
 cd src
-CUDA_VISIBLE_DEVICES=0 unbuffer python3 test_offline.py \
+CUDA_VISIBLE_DEVICES=0 python3 test_offline.py \
     --modeldir=$modeldir \
     --savedir=$savedir \
     --dataset_dir=../datasets \
