@@ -3,9 +3,9 @@
 Lizhen Wang, Xiaochen Zhao, [Tao Yu](https://ytrock.com/), [Yebin Liu](http://www.liuyebin.com/) and Songtao Wang<br>
 We propose NormalGAN, a fast adversarial learning-based method to reconstruct the complete and detailed 3D human from a single RGB-D image.
 
-[Project Page](http://www.liuyebin.com/NormalGan/normalgan.html) [paper](https://export.arxiv.org/abs/2007.15340)
+[[Project Page]](http://www.liuyebin.com/NormalGan/normalgan.html) [[paper]](https://export.arxiv.org/abs/2007.15340)
 
-Note: As we can not release our dataset, we do not release the training code. Now you can try NormalGAN on 3D dataset like THUman2.0(https://github.com/ytrock/THuman2.0-Dataset). If you are interested with our training code, please fell free to send an e-mail to Lizhen Wang(wlz18@mails.tsinghua.edu.cn).
+Note: As we can not release our dataset, we do not release the training code. Now you can try NormalGAN on 3D dataset like [THUman2.0](https://github.com/ytrock/THuman2.0-Dataset). If you are interested with our training code, please fell free to send an e-mail to Lizhen Wang (wlz18@mails.tsinghua.edu.cn).
 
 # Changelog
 2020.08.11 Release the test code and pretrained models
